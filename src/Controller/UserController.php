@@ -1,10 +1,10 @@
 <?php
 
 namespace Hurycan\Controller;
-try {
+if (file_exists(__DIR__.'\..\..\vendor\autoload.php')) {
     require_once(__DIR__.'\..\..\vendor\autoload.php');
-} catch (\Throwable $th) {
-    require_once(__DIR__.'\..\..\..\..\autoload.php');
+}else{
+    require_once(__DIR__.'\..\..\..\..\autoload.php');    
 }
 
 
