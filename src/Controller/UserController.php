@@ -1,8 +1,12 @@
 <?php
 
 namespace Hurycan\Controller;
+try {
+    require_once(__DIR__.'\..\..\vendor\autoload.php');
+} catch (\Throwable $th) {
+    require_once(__DIR__.'\..\..\..\..\autoload.php');
+}
 
-require_once(__DIR__.'\..\..\vendor\autoload.php');
 
 
 

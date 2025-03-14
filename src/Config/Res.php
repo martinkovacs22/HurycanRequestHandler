@@ -2,7 +2,12 @@
 
 namespace Hurycan\Config;
 
-require_once(__DIR__.'\..\..\vendor\autoload.php');
+try {
+    require_once(__DIR__.'\..\..\vendor\autoload.php');
+} catch (\Throwable $th) {
+    require_once(__DIR__.'\..\..\..\..\autoload.php');
+}
+
 
 class Res
 {
