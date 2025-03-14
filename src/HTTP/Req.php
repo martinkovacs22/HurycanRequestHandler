@@ -34,14 +34,22 @@ class Req
 		return $_SERVER['REMOTE_ADDR'];
 	}
 
-	static public function getReqFun(): string
-	{
-		try {
-			return isset(explode("/", $_SERVER['REQUEST_URI'])[Req::$funNum]) ? explode("/", $_SERVER['REQUEST_URI'])[Req::$funNum] : "";
-		} catch (\Throwable $th) {
-			return "";
-		}
-	}
+	public static function init(): void {
+        // Az URL darabolása "/"" szerint
+        $parts = explode("/", trim($_SERVER['REQUEST_URI'], "/"));
+
+        // Beállítjuk, hogy az utolsó elem indexe legyen `$funNum`
+        self::$funNum = count($parts) - 1;
+    }
+
+    static public function getReqFun(): string {
+        try {
+            $parts = explode("/", trim($_SERVER['REQUEST_URI'], "/"));
+            return isset($parts[self::$funNum]) ? $parts[self::$funNum] : "";
+        } catch (\Throwable $th) {
+            return "";
+        }
+    }
 	static public function getReqMethod(): string
 	{
 		return $_SERVER['REQUEST_METHOD'];
