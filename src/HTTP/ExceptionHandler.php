@@ -10,8 +10,8 @@ if (file_exists(__DIR__.'\..\..\vendor\autoload.php')) {
 }
 
 
-use Hurycan\Config\Res;
-use Hurycan\Config\HttpStatus;
+use Hurycan\HTTP\Res;
+use Hurycan\HTTP\HttpStatus;
 
 class ExceptionHandler
 {
