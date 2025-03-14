@@ -1,6 +1,7 @@
 <?php 
 
-namespace Hurycan\Config;
+
+namespace Hurycan\HTTP;
 
 class BaseFiles{
     public const CONFIG_INI = __DIR__ . "/../config.ini";

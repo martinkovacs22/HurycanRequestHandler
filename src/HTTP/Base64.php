@@ -1,6 +1,6 @@
 <?php
 
-namespace Hurycan\Config;
+namespace Hurycan\HTTP;
 
 class Base64{
     private String $fileName;

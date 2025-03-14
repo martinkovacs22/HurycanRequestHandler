@@ -9,12 +9,13 @@
     "autoload": {
         "psr-4": {
             "Hurycan\\": "src/",
-            "Hurycan\\Config\\": "src/Config/",
-            "Hurycan\\Model\\": "src/Model/",
-            "Hurycan\\Controller\\": "src/Controller/",
-            "Hurycan\\Service\\": "src/Service/"
+            "Hurycan\\HTTP\\": "src/HTTP/"
+
         }
     },
+    "bin": [
+        "bin/hurycan"
+    ],
     "authors": [
         {
             "name": "martinkovacs22",

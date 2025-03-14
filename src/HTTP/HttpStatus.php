@@ -1,6 +1,7 @@
 <?php
 
-namespace Hurycan\Config;
+
+namespace Hurycan\HTTP;
 
 class HttpStatus {
     const OK = 200;
