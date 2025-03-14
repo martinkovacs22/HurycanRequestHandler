@@ -44,6 +44,7 @@ class Req
 
     static public function getReqFun(): string {
         try {
+			Req::init();
             $parts = explode("/", trim($_SERVER['REQUEST_URI'], "/"));
             return isset($parts[self::$funNum]) ? $parts[self::$funNum] : "";
         } catch (\Throwable $th) {
